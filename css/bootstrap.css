@@ -5968,7 +5968,8 @@ a.badge:focus {
 
 .carousel-inner {
   position: relative;
-  width: 100%;
+  width: 600px;
+  height: 400px;
   overflow: hidden;
 }
 
