@@ -126,7 +126,6 @@ $(document).ready(function() {
   /* ---------------------- GITHUB ---------------------- */
 
   $("#guardarGH").click(function(e){
-    // fa22dfc3aa38dfe6855c42980b3163dfcec66e8b
     e.preventDefault();
     var token = $("#token").val();
     var user = $("#identgithub").val();
@@ -691,7 +690,6 @@ $(document).ready(function() {
     }
 
     function showUsers(id){
-      //var apiKey = 'AIzaSyBAGoM7AQnX7-VkLhGMelCwX_GXam5hArY';
       handleClientLoad(apiKey, id);
     }
 
