@@ -1,0 +1,546 @@
+/* CSS for simple.html (Leaflet) */
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.site-header{
+  padding-top: 0px;
+}
+
+.welcome0{
+  padding: 60px 50px 0px 0px;
+}
+
+.welcome{
+  padding: 60px 50px 0px 0px;
+  width: 1250px;
+}
+
+
+.inicio{
+  width: 550px;
+  margin-bottom: 30px;
+}
+
+@font-face {
+  font-family: Banty;
+  src: url('fonts/Banty.ttf');
+}
+
+#principal-titles{
+  padding-top: 0px;
+}
+
+#lista-ppal{
+  margin-left: 0px;
+  text-align: left;
+}
+
+#desc-ppal{
+  width: 700px;
+}
+
+
+/* ---------------------- INIT ---------------------- */
+
+#principal,
+#colecciones,
+#instalaciones,
+#btn-principal,
+#btn-colecciones,
+#btn-instalaciones,
+#cont-github{
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#pestanas{
+  left: 23%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.active{
+  background: #EFDEDE;
+  color: white;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.botones:hover{
+  background: #E59999;
+  color: white;
+  height: 40px;
+  border-radius: 5px;
+}
+
+#github{
+    padding: 0px;
+    margin: 0px;
+    background: #fff;
+    /*height: auto;*/
+    width: 100%;
+    overflow: hidden;
+}
+
+#token,
+#repositorio,
+#fichero,
+#identgithub{
+  background: #c85b5f;
+  color: white;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 18px;
+  width: 210px;
+  height: 55px;
+}
+
+#guardarGH,
+#cargarGH{
+  border: 5px solid #c85b5f;
+  width: 100px;
+  height: 55px;
+  padding: 0px;
+}
+
+#start-btn .btn{
+  margin: 0 auto;
+  line-height: 30px;
+  width: 100%;
+}
+
+/* ---------------------- PRINCIPAL STYLE ---------------------- */
+
+#map{
+  width: auto;
+  height: 384px;
+}
+
+.leaflet-popup-content-wrapper{
+  min-width: 150px;
+}
+
+.header-top{
+  background-color: #EFDEDE;
+  height: 430px;
+  margin-bottom: 0px;
+}
+
+.banner{
+  width: auto;
+  height: 350px;
+  background-color: #C85B5F;
+  position:relative;
+
+}
+
+.img-banner{
+  padding-top: 50px;
+  width: auto;
+  position: absolute;
+}
+
+.logo{
+  height: 130px;
+  padding: 0px 0 50px 0;
+  /**height: 100px;*/
+}
+
+.tabs{
+  padding: 15px;
+}
+
+#minusvalidosP,
+#minusvalidosC{
+  float: right;
+  widht: 50px;
+  height: 50px;
+}
+
+.parking{
+  margin-right: 40px;
+}
+
+[id^="parkP-"]:hover,
+.sortable-list:hover{
+  border: 5px dotted #C85B5F;
+  border-radius: 8px;
+  cursor: grab;
+}
+
+.sortable-list:hover{
+  border: 5px dotted #C85B5F;
+  border-radius: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+#gif-inicio{
+  width: 500px;
+  height: auto;
+  margin: 50px 0 0 25px;
+}
+
+#gusers{
+  width: 600px;
+  /*min-height: 190px;*/
+  border: 5px solid #F78181;
+  font-size: 14px;
+  overflow: scroll;
+  height: 190px;
+}
+
+
+/* ---------------------- COLLECTIONS STYLE ---------------------- */
+
+.collection-btn{
+  line-height: 40px;
+}
+
+
+.collection-col{
+  width: 380px;
+  height: auto;
+  float: left;
+  padding: 20px 15px 0 25px;
+}
+
+.form-horizontal{
+  color: black;
+  font-size: 1.2em;
+}
+
+.list-of-parks{
+  width: 380px;
+  height: auto;
+}
+
+.carousel-control{
+  line-height: 10px;
+}
+
+.lleft:before{
+  content: "\23EA";
+  font-size: 30px;
+}
+
+.rright:before{
+  content: "\23E9";
+  font-size: 30px;
+  margin-right: 0px;
+}
+
+[id^="img-"]{
+  width: 600px;
+  height: 400px;
+  margin-right: 20px;
+}
+
+.featured-blocks .media .media-body .colecciones-title h1
+{
+  font-size: 23px;
+}
+
+#collection-title{
+  text-transform: none;
+  font-size: 24px;
+}
+
+#new-collection{
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+#my-collections{
+  border: 4px solid transparent;
+  min-height: 100px;
+  padding-top: 20px;
+  color: #94AFD6;
+  font-size: 28px;
+  font-family: fantasy;
+  font-weight: bold;
+}
+
+#mapC1,
+#mapC2{
+  width: 460px;
+  height: 350px;
+  float: right;
+}
+
+.campo-col-title{
+  font-size: 35px;
+  padding: 5px 0 10px 0;
+}
+
+.campo-col-head-parks{
+  font-size: 24px;
+  min-width: 300px;
+  min-height: 30px;
+}
+
+#campo-col-list h5,
+#campo-col-listP h5,
+[id^="parkP-"] h5,
+[id^="ColParkC-"] div h5
+{
+  font-size: 18px;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: #0088cc;
+  text-rendering: optimizelegibility;
+}
+
+#campo-col-list p
+#campo-col-listP p,
+[id^="parkP-"] p,
+[id^="ColParkC-"] div p{
+  font-size: 17px;
+  color: #9d9d9d;
+  line-height: 24px;
+  padding-bottom: 25px;
+  font-family: 'source_sans_proregular';
+  margin-bottom: 0;
+  margin: 0 0 10px;
+}
+
+#title-personaliza{
+  padding-right: 50px;
+}
+
+#box-personaliza{
+  margin-left: -40px;
+}
+
+#personaliza{
+  text-align: center;
+}
+
+#caja{
+  width: 440px;
+  min-height: 500px;
+  color: #ddd;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  background: #C85B5F;
+  margin: 0 0 25px;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 35px 0px 25px 0px;
+  -moz-border-radius: 35px 0px 35px 0px;
+  -webkit-border-radius: 35px 0px 35px 0px;
+  border: 2px solid #F78181;
+}
+
+#sortable1{
+  border: 1px solid #eee;
+  width: 300px;
+  height: 500px;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 0 0 0;
+  float: left;
+  margin-right: 10px;
+}
+#sortable1 li{
+  margin: 0 5px 5px 5px;
+  padding: 5px;
+  font-size: 1.2em;
+  width: 120px;
+  cursor: grab;
+}
+
+[id^="Col-"]:hover{
+  color: #C85B5F;
+  cursor: grab;
+}
+
+#my-collections{
+  width: 300px;
+  height: 500px;
+}
+
+#basurero{
+  margin-top: 85px;
+  width: 100px;
+  height: 100px;
+}
+
+#caja-col{
+  border: 2px solid grey;
+  width: 400px;
+  height: 50px;
+  background-color: white;
+  border-radius: 35px 0px 35px 0px;
+  -moz-border-radius: 35px 0px 35px 0px;
+  -webkit-border-radius: 35px 0px 35px 0px;
+  color: #94AFD6;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 12px;
+  list-style: none;
+}
+
+#caja-par{
+  color: #333;
+  padding-top: 20px;
+  border: 2px solid grey;
+  width: 400px;
+  min-height: 495px;
+  background-color: #EFDEDE;
+  border-radius: 35px 0px 35px 0px;
+  -moz-border-radius: 35px 0px 35px 0px;
+  -webkit-border-radius: 35px 0px 35px 0px;
+}
+
+#save-collection,
+#back-original-collection{
+  border: 3px solid #aaa;
+  padding-top: 10px;
+  margin-top: 15px;
+}
+
+/* ---------------------- INSTALATIONS STYLE ---------------------- */
+
+.instal-format{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 30px;
+}
+
+
+#park-picturesI,
+#park-descriptionI,
+#headerI{
+  margin-left: 45px;
+}
+
+.img-mini{
+  margin-right: -60px;
+}
+
+
+[id$="-mini"]{
+  width: 200px;
+  height: 150px;
+}
+
+
+#cajaI{
+  width: auto;
+  min-height: 500px;
+  color: #ddd;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  background: #C85B5F;
+  margin: 0 0 25px;
+  overflow: hidden;
+  padding: 0px;
+  border-radius: 35px 0px 25px 0px;
+  -moz-border-radius: 35px 0px 35px 0px;
+  -webkit-border-radius: 35px 0px 35px 0px;
+  border: 2px solid #F78181;
+}
+
+#cajaI1{
+  padding: 15px 15px 15px 15px;
+  margin: 15px 15px 15px 15px;
+  border-radius: 35px 0px 25px 0px;
+  -moz-border-radius: 35px 0px 35px 0px;
+  -webkit-border-radius: 35px 0px 35px 0px;
+  border: 2px solid #F78181;
+  width: auto;
+  min-height: 490px;
+  background: #DB7E7F;
+}
+
+#ruler{
+  margin-left: 17%;
+}
+
+#park-descriptionI h5{
+  font-size: 20px;
+}
+
+#park-descriptionI p{
+  font-size: 17px;
+  color: #716a72;
+  padding-top: 10px;
+}
+
+#cajaI2{
+  padding: 15px 15px 15px 0px;
+  margin: 15px 15px 15px 0;
+  border-radius: 35px 0px 25px 0px;
+  -moz-border-radius: 35px 0px 35px 0px;
+  -webkit-border-radius: 35px 0px 35px 0px;
+  border: 2px solid #F78181;
+  width: auto;
+  min-height: 490px;
+  background: #EFDEDE;
+  overflow: scroll;
+  height: 495px;
+}
+
+#clave-google{
+  width: auto;
+  min-height: none;
+  max-height: none;
+  height: auto;
+  padding-left: 20px;
+  background-color: pink;
+  border: 5px solid #716A72;
+}
+
+#api-key{
+  /*color: #716A72;*/
+  background-color: #888;
+}
+
+#users-btn .btn{
+  margin: 0 auto;
+  line-height: 30px;
+  width: 100%;
+  background: #8ae9f5;
+  color: #444;
+}
+
+#allUsers{
+  width: 100%;
+  /*min-height: 190px;*/
+  overflow: hidden;
+  border: 5px solid #F78181;
+  font-size: 14px;
+}
+
+[id^="user-"]{
+  float: left;
+  margin: 18px;
+  padding: 10px;
+}
+
+
+[id^="user-"] img{
+   width: 100px;
+   height: 100px;
+   align-items: center;
+ }
+
+[id^="user-"] h5{
+  color: #0088CE;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important;
+  }
+}

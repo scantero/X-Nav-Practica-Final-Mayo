@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="shortcut icon" href="img/logo-moto.png">
+        <title>AparcaMadrid</title>
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="css/custom-styles.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/component.css">
+        <link rel="stylesheet" href="css/font-awesome-ie7.css">
+        <link href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrap.cdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="js/jquery-1.9.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+        <!--<script src="js/leaflet.js"></script>-->
+        <script src="js/github.js"></script>
+        <script src="js/parking.js"></script>
+    </head>
+    <body>
+
+      <!--******************************************************************************************************-->
+      <!--******************************************************************************************************-->
+      <!--***************************************BEGIN CABECERA CTE ********************************************-->
+      <!--******************************************************************************************************-->
+      <!--******************************************************************************************************-->
+
+
+            <!-- CABECERA CONSTANTE -->
+            <div class="container">
+                <div class="site-header">
+
+                    <!-- BANNER -->
+                    <div class = "header-top">
+                      <div class="logo">
+                        <img src="img/logo-peq-rosa.png" width="500px" height="50px"></img><img src="img/logo.png" width="100px" height="100px"></img>
+                      </div>
+                      <div class="banner">
+                        <!-- IMAGEN BANNER -->
+                        <div class="img-banner"><img src="img/Aparcamientos.jpg"></img></div>
+                      </div>
+                    </div>
+                    <!-- FIN BANNER -->
+
+                    <!-- TABS -->
+                    <div class="menu">
+                        <div class="navbar">
+                            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                                <i class="fw-icon-th-list"></i>
+                            </a>
+                            <div class="nav-collapse collapse">
+                                <ul class="nav" id="pestanas">
+                                    <li id="btn-principal" class="active botones"><a class="hola" href="#">Principal</a></li>
+                                    <li class="botones"><a id="btn-colecciones" href="#">Coleciones</a></li>
+                                    <li class="botones"><a id="btn-instalaciones" href="#">Instalaciones</a></li>
+                                </ul>
+                            </div><!--/.nav-collapse -->
+                            <div class="container" id="cont-github">
+                                <div id="github" class="featured-heading">
+                                    <form class="form-horizontal input-append">
+                                        <input id="token" class="span3" type="text" value="Token">
+                                        <input id="identgithub" class="span3" type="text" value="Usuario Github">
+                                        <input id="repositorio" class="span3" type="text" value="Repositorio GitHub">
+                                        <input id="fichero" class="span3" type="text" value="File name">
+                                        <button id="guardarGH" type="submit" class="btn collection-btn">SAVE-GH</button>
+                                        <button id="cargarGH" type="submit" class="btn collection-btn">LOAD-GH</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="mini-menu">
+                          <label>
+                            <select class="selectnav">
+                              <option value="#" selected="">Principal</option>
+                              <option value="#">Colecciones</option>
+                              <option value="#">→ Instalaciones</option>
+                            </select>
+                          </label>
+                        </div>
+                    </div>
+                    <!-- FIN TABS -->
+                </div>
+            </div>
+            <!-- FIN CABECERA CONSTANTE -->
+
+
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+            <!--**************************************** END CABECERA CTE ********************************************-->
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+            <!--***************************************BEGIN BOTÓN START *********************************************-->
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+
+
+            <!-- START BUTTON -->
+            <div class="container">
+              <div id="startedOK" class="featured-content">
+
+                    <div id="start-btn" class="block">
+                        <button id="start-all" class="btn">COMENZAR!</button>
+                    </div>
+
+              </div>
+            </div>
+            <!-- END START BUTTON -->
+
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+            <!--**************************************** END BOTÓN START *********************************************-->
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+
+
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+            <!--**************************************** BEGIN PRINCIPAL *********************************************-->
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+
+<div id="principal">
+            <!-- CONTAINER -->
+            <div class="container">
+              <div id="map">
+                <!-- AQUÍ EL MAPA -->
+              </div>
+            </div>
+            <!-- END CONTAINER -->
+
+            <div class="container">
+                <div class="featured-content">
+                    <div class="row-fluid welcome0">
+                        <div class="span5 offset1">
+                            <div class="block">
+                                <h1>APARCAMIENTOS EN MADRID</h1>
+                                <h2>Bienvenido a nuestro sitio AparcaMadrid</br>¡Disfruta de tu visita!</h2>
+                            </div>
+                        </div>
+                        <div class="span5">
+                            <div class="block-content">
+                                <h3>Busca los aparcamientos en Madrid que más se ajusten a ti</h3>
+                                <p>Podrás crear colecciones de tus aparcamientos favoritos, y asignar seguidores a los diferentes aparcamientos ;)
+                                </p>
+                                <p class="last">Además, podrás guardar tus colecciones en GitHub y cargarlas siempre que quieras, así no tendŕas que volver a crearlas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="featured-blocks" id="principal-titles">
+                    <div class="row-fluid welcome">
+                        <div class="span4" id="lista-ppal">
+                            <div id="list-zone" class="media">
+                              <div class="media-body">
+                                <h1  class="media-heading">Lista Aparcamientos<img id="minusvalidosP" src="img/minusv.jpg"></img></h1>
+
+                                <div class="ruler-bottom inicio"></div>
+                                <div class="list-of-parks-P">
+                                </div>
+                                <!--<p class="spacing-t">Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, euin vulputate magna eros lipsum</p>-->
+                                <!--<a href="#" class="btn">more</a>-->
+                              </div>
+                            </div>
+                        </div>
+                        <div class="span8" id="desc-ppal">
+                            <div id="description-zone" class="media">
+                              <div class="media-body">
+                                <h1 class="media-heading">Parking Info - Selecciona un aparcamiento</h1>
+                                <div class="ruler-bottom inicio"></div>
+                                <!-- DESCRIPCIÓN DEL PARKING -->
+                                <div id="park-description">
+                                  <img id="gif-inicio" src="img/giphy.gif"></img>
+                                </div>
+
+                                <!-- CARROUSEL DE FOTOS CERCANAS -->
+                                <div class="carousel slide" id="myCarousel">
+                                                <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img id="img-1" src="img/banner-image.jpg" alt="" class="bw">
+                                        </div>
+                                        <div class="item">
+                                            <img id="img-2" src="img/banner-image.jpg" alt="" class="bw">
+                                        </div>
+                                        <div class="item">
+                                            <img id="img-3" src="img/banner-image.jpg" alt="" class="bw">
+                                        </div>
+                                        <div class="item">
+                                            <img id="img-4" src="img/banner-image.jpg" alt="" class="bw">
+                                        </div>
+                                    </div>
+                                    <a data-slide="prev" href="#myCarousel" class="carousel-control left"><span class="lleft" aria-hidden="true"></i></a>
+                                    <a data-slide="next" href="#myCarousel" class="carousel-control right"><span class="rright" aria-hidden="true"></i></a>
+                                </div>
+
+                                <div id="gusers">
+
+                                </div>
+
+                              </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- VIEW OF SELECTED COLLECTION -->
+            <div class="container" id="description-col-P">
+                  <div class="featured-content">
+                      <div class="row-fluid">
+                          <div class="span6 col-left">
+                              <div class="block">
+                                  <h1 class="campo-col-title"></h1>
+                                  <div id="mapC1"></div>
+                              </div>
+                          </div>
+                          <div class="span6 col-right">
+                              <div class="block-content">
+                                  <h2 class="campo-col-head-parks"></h3>
+                                  <p id="campo-col-listP"></p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+</div>
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+            <!--****************************************** END PRINCIPAL *********************************************-->
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+            <!--*************************************** BEGIN COLECCIONES ********************************************-->
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+<div id="colecciones">
+            <div class="container">
+                <div id="new-collection" class="featured-heading">
+                    <h1>¿Quieres crear una nueva colección?</h1>
+                    <h2>Introduce el nombre de la Colección:</h2>
+                    <form class="form-horizontal input-append">
+                        <input id="collection-title" class="span3" type="text" value="">
+                        <button id="submit-collection" type="submit" class="btn collection-btn">NUEVA</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="featured-blocks">
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <div class="media">
+                              <div class="media-body">
+                                <div class="colecciones-title">
+                                  <h1 class="media-heading colecciones-title">Colecciones existentes</h1>
+                                  <div class="ruler-bottom" style="width: 310px;"></div>
+                                  <div id="my-collections">
+                                    <ul id="sortable1" class="connectedSortable1">
+                                    </ul>
+                                  </div>
+                                  <div id="basurero">
+                                    <img src="img/papel1.png" width="75px" height="75px"></img>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="span5" style="width: 440px">
+                            <div class="media" id="box-personaliza" style="width: 440px">
+                              <div class="media-body" style="width: 440px">
+                                <div class="colecciones-title" id="title-personaliza">
+                                  <h1 id="personaliza" class="media-heading">Personaliza la Colección</h1>
+                                  <div id="caja">Arrastra aquí la colección que quieras modificar
+                                    <div id="caja-col" class="connectedSortable1"></div>
+                                    Agrega o elimina aparcamientos de la lista
+                                    <div id="caja-par" class="connectedSortable2">
+                                    </div>
+                                    <a href="#" id="save-collection" class="btn">Done!</a>
+                                    <a href="#" id="back-original-collection" class="btn">Cancel</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="span3">
+                            <div class="media">
+                              <div class="media-body">
+                                <div class="colecciones-title">
+                                  <h1 class="media-heading">Lista Aparcamientos<img id="minusvalidosC" src="img/minusv.jpg"></img></h1>
+                                  <div class="ruler-bottom"></div>
+                                  <div class="list-of-parks-C">
+                                 </div>
+                                </div>
+                                <!--<p class="spacing-t">Jraesent dapibus, neque id cursus faucibus, tortor neque egestas augue, euin vulputate magna eros lipsum</p>-->
+                                <!--<a href="#" class="btn">more</a>-->
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIEW OF SELECTED COLLECTION -->
+            <div class="container" id="description-col-C">
+                <div class="featured-content">
+                    <div class="row-fluid">
+                        <div class="span6 col-left">
+                            <div class="block">
+                                <h1 class="campo-col-title"></h1>
+                                <div id="mapC2"></div>
+                            </div>
+                        </div>
+                        <div class="span6 col-right">
+                            <div class="block-content">
+                                <h2 class="campo-col-head-parks"></h3>
+                                <p id="campo-col-list"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+            <!--*************************************** END COLECCIONES **********************************************-->
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+
+
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+            <!--*************************************** BEGIN INSTALACIONES ******************************************-->
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+<div id="instalaciones">
+
+              <div class="container " id="park-selected">
+                <div class="featured-blocks instal-format">
+                  <div class="row-fluid">
+                    <div id="cajaI">
+                      <div class="span9 ruler-right">
+                        <div class="media">
+                          <div class="media-body">
+                            <div id="cajaI1">
+                                <h1 id="headerI" class="media-heading">Parking Info - Aparcamiento seleccionado:</h1>
+                                <div class="ruler-bottom inicio" id="ruler"></div>
+                                <!-- DESCRIPCIÓN DEL PARKING -->
+                                <div id="park-descriptionI">
+                                </div>
+                                <!-- FOTOS CERCANAS -->
+                                <div id="park-picturesI">
+                                  <div class="row-fluid">
+                                    <div class="span3" class="img-mini">
+                                        <img id="img-1-mini" src="img/banner-image.jpg" alt="" class="bw">
+                                    </div>
+                                    <div class="span3">
+                                        <img id="img-2-mini" src="img/banner-image.jpg" alt="" class="bw">
+                                    </div>
+                                    <div class="span3">
+                                        <img id="img-3-mini" src="img/banner-image.jpg" alt="" class="bw">
+                                    </div>
+                                    <div class="span3">
+                                        <img id="img-4-mini" src="img/banner-image.jpg" alt="" class="bw">
+                                    </div>                                                                                 <!-- Carousel items -->
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="span3">
+                          <div class="media">
+                            <div class="media-body">
+                              <div id="cajaI2" class="connectedSortable3">
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="clave-google">
+                <!--<div class="featured-blocks instal-format">
+                  <div class="row-fluid">-->
+                    <form class="form-horizontal input-append">
+                        <h5>Introduce tu ApiKey<h5>
+                        <input id="api-key" class="span3" type="text" value="">
+                    </form>
+
+                  <!--</div>
+                </div>-->
+              </div>
+
+
+              <div class="container" id="users-btn">
+                <div class="featured-blocks instal-format">
+                  <div class="row-fluid">
+                    <a id="google-btn" href="#" class="btn">Usuarios Google+</a>
+                  </div>
+                </div>
+              </div>
+              <div class="container" id="users-loaded">
+                <div class="featured-blocks instal-format">
+                  <div class="row-fluid">
+                    <div id="allUsers" class="connectedSortable3">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+</div>
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+            <!--**************************************** END INSTALACIONES *******************************************-->
+            <!--******************************************************************************************************-->
+            <!--******************************************************************************************************-->
+
+
+
+
+
+          <div class="container">
+                <div class="copy-rights">
+                  <footer>
+                    &copy; Copyright AparcaMadrid. <strong>Code designed by:<a href="https://github.com/scantero/X-Nav-Practica-Final-Mayo">Sandra Cantero</a> </strong></br> Parkings data from fichero con los datos abiertos de aparcamientos para residentes proporcionado por el <a href="http://datos.madrid.es">Ayuntamiento de Madrid</a>
+                  </footer>
+                </div>
+            </div>
+
+    </body>
+</html>
